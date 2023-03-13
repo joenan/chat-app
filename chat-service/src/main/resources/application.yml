@@ -1,0 +1,25 @@
+# Spring properties
+management:
+  server:
+    port: 9888
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: "*"
+
+spring:
+  application:
+    name: chat-service
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9888/eureka/
+
+# HTTP Server
+server:
+  port: 9889   # HTTP (Tomcat) port
+
+
